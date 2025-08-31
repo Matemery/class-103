@@ -1,0 +1,24 @@
+body{
+    font-family: Arial;
+}
+.btn{
+    background-color: aqua;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+
+}
+.results{
+    background-color: #dedede;
+    height: 200px;
+    margin: 20px;
+}
+.cold{
+    color: blue;
+}
+.normal{
+    color: green;
+}
+.hot{
+    color: red;
+}S

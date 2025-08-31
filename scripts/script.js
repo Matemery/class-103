@@ -65,3 +65,14 @@ console.log("one week plus my vacation days is",totaldays + "days in total" );
 vacationdays = 21;
 totaldays=(daysinweek+vacationdays);
 console.log("one week plus my vacation days is",totaldays + "days in total" );
+
+// assignment 1
+let char ="mat"
+let action = "jumping"
+let object = "trapoline"
+let place = "my house"
+let time ="afternoon"
+
+console.log(char + " was at " + place + " in the " + time)
+console.log("we were " + action + " on my " + object)
+console.log(char + " was " + action + " too high and jumped out of " + object + " and bumped his head.")
