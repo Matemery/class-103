@@ -76,3 +76,21 @@ let time ="afternoon"
 console.log(char + " was at " + place + " in the " + time)
 console.log("we were " + action + " on my " + object)
 console.log(char + " was " + action + " too high and jumped out of " + object + " and bumped his head.")
+
+
+function convertCelsiusToFahrenheit() {
+  let celsiusInput = prompt("Enter the temperature in Celsius:");
+
+  let celsius = parseFloat(celsiusInput);
+  if (isNaN(celsius)) {
+    alert("Invalid input. Please enter a numerical value for temperature.");
+    return;
+  }
+
+let fahrenheit = (celsius * 9 / 5) + 32;
+
+console.log(`${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F.`);
+}
+
+convertCelsiusToFahrenheit();
+  
