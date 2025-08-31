@@ -78,19 +78,39 @@ console.log("we were " + action + " on my " + object)
 console.log(char + " was " + action + " too high and jumped out of " + object + " and bumped his head.")
 
 
-function convertCelsiusToFahrenheit() {
-  let celsiusInput = prompt("Enter the temperature in Celsius:");
 
-  let celsius = parseFloat(celsiusInput);
-  if (isNaN(celsius)) {
-    alert("Invalid input. Please enter a numerical value for temperature.");
-    return;
+function convertTemperature() {
+  let temperatureInput = prompt("Enter the temperature value:");
+
+  let temperature = parseFloat(temperatureInput);
+
+  if (isNaN(temperature)) {
+    console.log("Invalid input. Please enter a valid number for the temperature.");
+    return; 
   }
 
-let fahrenheit = (celsius * 9 / 5) + 32;
 
-console.log(`${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F.`);
+  let originalUnit = prompt("Enter the original unit (C for Celsius, F for Fahrenheit):").toUpperCase();
+
+  let convertedTemperature;
+  let convertedUnit;
+
+  if (originalUnit === 'C') {
+
+    convertedTemperature = (temperature * 9 / 5) + 32;
+    convertedUnit = 'Fahrenheit';
+    console.log(`${temperature}°C is equal to ${convertedTemperature.toFixed(2)}°F.`);
+  } else if (originalUnit === 'F') {
+
+    convertedTemperature = (temperature - 32) * 5 / 9;
+    convertedUnit = 'Celsius';
+    console.log(`${temperature}°F is equal to ${convertedTemperature.toFixed(2)}°C.`);
+  } else {
+    console.log("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.");
+    return;
+  }
 }
+convertTemperature();
 
-convertCelsiusToFahrenheit();
-  
+
+
